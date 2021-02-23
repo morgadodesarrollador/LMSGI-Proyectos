@@ -11,7 +11,6 @@ class DB {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ //los resultados los regrese en un objeto
         ];
         $dsn = "mysql:host=".config::DB_HOST.";dbname=".config::DB_NAME.";charset=".config::DB_CHARSET;
-        echo $dsn;
         $this->pdo = new PDO($dsn, config::DB_USER, config::DB_PASS, $opciones);
     }
 
