@@ -10,8 +10,9 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 // creamos la aplicación php
 $app = AppFactory::create();
-$app->get("/hello", function(ServerRequestInterface $request, ResponseInterface $response, $args) {
+$app->get("Libreria/apilibreria/public/hello", function(ServerRequestInterface $request, ResponseInterface $response, $args) {
 	print("Hello world!");
+    return $response;
 });
 
 //Cargamos en memoria los archivos de rutas que contendrán los entrypoints a cada una de las tablas.
