@@ -16,7 +16,7 @@
         public function getAll(Request $request, Response $response, $args){
            
             $libros = LibrosModel::getAll();
-            $librosJson = json_encode($libros);*/
+            $librosJson = json_encode($libros);
            // $librosJson = "Listado de libros";
             $response->getBody()->write($librosJson);
             return $response
