@@ -7,15 +7,17 @@
 
     class LibrosController {
         
-        public function new($request, $response, $args){
+        public function new(Request $request, Response $response, $args){
             $response->getBody()->write("Insertar un nuevo Libro");
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
         }
-        public function getAll($request, $response, $args){
+        public function getAll(Request $request, Response $response, $args){
+           /*
             $libros = LibrosModel::getAll();
-            $librosJson = json_encode($libros);
+            $librosJson = json_encode($libros);*/
+            $librosJson = "Listado de libros";
             $response->getBody()->write($librosJson);
             return $response
                 ->withHeader('Content-Type', 'application/json')
