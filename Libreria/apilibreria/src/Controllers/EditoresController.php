@@ -2,17 +2,16 @@
     namespace App\Controllers;
     use Psr\Http\Message\ResponseInterface as Response;
     use Psr\Http\Message\ServerRequestInterface as Request;
-#use App\Controllers\BaseController;
-    use App\Model\LibrosModel;    
+    use App\Model\EditoresModel;    
 
     class EditoresController {
         
         public function getAll(Request $request, Response $response, $args){
-           // $libros = LibrosModel::getAll();
-           // $librosJson = json_encode($libros);
+            $editores = EditoresModel::getAll();
+            $editoresJson = json_encode($editores);
            // $librosJson = "Listado de libros";
-            //$response->getBody()->write($librosJson);
-            $response->getBody()->write("Listado de Editores");
+            $response->getBody()->write($editoresJson);
+           // $response->getBody()->write("Listado de Editores");
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
