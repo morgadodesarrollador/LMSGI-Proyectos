@@ -18,10 +18,11 @@ class DB {
         // Ejecutará las consulta $sql con parámetros que le pasemos
         //sql --> select * from articulos where id = ? and precio > ?
         //En args meteremos variables del where de una consulta --> $args = [10, 56.7]
-        if (!$args){
+        if (!$args){ // select * from table
             $data = $this->pdo->query($sql);
             return $data;
         }
+        //consultas PARAMETRIZADAS
         //manda argumentos --> preparamos la sentencia
         //hace una sustitución de variables
         $sentencia = $this->pdo->prepare($sql);
