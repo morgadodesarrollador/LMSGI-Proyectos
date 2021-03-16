@@ -15,16 +15,7 @@
         }
 
         public function getFilter(Request $request, Response $response, $args){
-            $parametros = $request->getQueryParams();
-            $precio = $parametros['precio'];
-            var_dump($parametros);
-            $args = array ($precio);
-            $libros = LibrosModel::getFilter($args);
-            $librosJson = json_encode($libros);
-            $response->getBody()->write($librosJson);
-            return $response
-                ->withHeader('Content-Type', 'application/json')
-                ->withStatus(200);
+           echo "hola";
         }
         public function getAll(Request $request, Response $response, $args){
            
