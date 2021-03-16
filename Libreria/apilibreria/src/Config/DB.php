@@ -22,7 +22,6 @@ class DB {
             $data = $this->pdo->query($sql);
             return $data;
         }
-        var_dump($args);
         //consultas PARAMETRIZADAS
         //manda argumentos --> preparamos la sentencia
         //hace una sustitución de variables
