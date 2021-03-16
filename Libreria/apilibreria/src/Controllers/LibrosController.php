@@ -20,7 +20,7 @@
             
           //  $ed = $parametros['editorial'];
             $valores = array($precio);
-            $libros = LibrosModel::getFilter($valores);
+            $libros = LibrosModel::getFilter([$precio]);
             $librosJson = json_encode($libros); 
             $response->getBody()->write($librosJson);
             return $response
