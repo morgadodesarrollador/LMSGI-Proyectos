@@ -17,16 +17,14 @@
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             $precio = $parametros['precio'];
-            $ciudad = $parametros['ciudad'];
             $ed = $parametros['editorial'];
-            var_dump($precio);
-          /*  $args = array ($precio);
-            $libros = LibrosModel::getFilter($args);
+            $valoresParametros = array ($precio);
+            $libros = LibrosModel::getFilter($valoresParametros);
             $librosJson = json_encode($libros);
-            $response->getBody()->write($parametros);
+            $response->getBody()->write($librosJson);
             return $response
                 ->withHeader('Content-Type', 'application/json')
-                ->withStatus(200);*/
+                ->withStatus(200);
         }
         public function getAll(Request $request, Response $response, $args){
            
