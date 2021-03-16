@@ -16,15 +16,15 @@
 
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
-         /*   $precio = $parametros['precio'];
+            $precio = $parametros['precio'];
             var_dump($parametros);
-            $args = array ($precio);
+          /*  $args = array ($precio);
             $libros = LibrosModel::getFilter($args);
-            $librosJson = json_encode($libros);*/
+            $librosJson = json_encode($libros);
             $response->getBody()->write($parametros);
             return $response
                 ->withHeader('Content-Type', 'application/json')
-                ->withStatus(200);
+                ->withStatus(200);*/
         }
         public function getAll(Request $request, Response $response, $args){
            
