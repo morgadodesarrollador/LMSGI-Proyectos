@@ -17,7 +17,9 @@
         public function getFilter(Request $request, Response $response, $args){
             $parametros = $request->getQueryParams();
             $precio = $parametros['precio'];
-            var_dump($parametros);
+            $ciudad = $parametros['ciudad'];
+            $ed = $parametros['editorial'];
+            var_dump($precio);
           /*  $args = array ($precio);
             $libros = LibrosModel::getFilter($args);
             $librosJson = json_encode($libros);
