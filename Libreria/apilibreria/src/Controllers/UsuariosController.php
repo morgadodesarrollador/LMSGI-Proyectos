@@ -8,7 +8,14 @@
         public function new(Request  $request, Response $response, $args){
             $parametros = $request->getParsedBody();
             var_dump($parametros);
-            $result = UsuariosModel::new($parametros);
+            $uid = $parametros['usuarioid'];
+            $nombre = $parametros['nombre'];
+            $apellidos = $parametros['apellidos'];
+            $direccion = $parametros['direccion'];
+            $anionac = $parametros['anioNac'];
+            $ciudad = $parametros['ciudad'];
+            $valores = array($uid, $nombre, $apellidos, $direccion, $ciudad, $anionac);
+            $result = UsuariosModel::new($valores);
             $response->getBody()->write($result);
             return $response
                 ->withHeader('Content-Type', 'application/json')
