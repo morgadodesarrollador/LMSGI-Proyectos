@@ -6,6 +6,7 @@
     class UsuariosController {
     
         public function new(Request  $request, Response $response, $args){
+            echo "ldkfldf";
             $response->getBody()->write("Insercción de Nuevo Usuarios");
             return $response
                 ->withHeader('Content-Type', 'application/json')
