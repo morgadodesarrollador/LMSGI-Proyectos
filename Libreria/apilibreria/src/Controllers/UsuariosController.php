@@ -12,7 +12,7 @@
             $nombre = $parametros['nombre'];
             $apellidos = $parametros['apellidos'];
             $direccion = $parametros['direccion'];
-            $anionac = $parametros['anioNac'];
+            $anionac = (int)$parametros['anioNac'];
             $ciudad = $parametros['ciudad'];
             $valores = array($uid, $nombre, $apellidos, $direccion, $ciudad, $anionac);
             $result = UsuariosModel::new($valores);
