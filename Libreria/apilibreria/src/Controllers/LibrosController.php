@@ -10,7 +10,7 @@
         public function new(Request $request, Response $response, $args){
             $parametros = $request->getParsedBody();
             var_dump($parametros);
-            $response->getBody()->write("Insertar un nuevo Libro");
+            $response->getBody()->write("Insertar un nuevo Libro1");
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
