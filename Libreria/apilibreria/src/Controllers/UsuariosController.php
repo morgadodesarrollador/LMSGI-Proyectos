@@ -7,7 +7,7 @@
     
         public function new(Request  $request, Response $response, $args){
             $parametros = $request->getParsedBody();
-            var_dump($parametros);
+          //  var_dump($parametros);
             $uid = $parametros['usuarioid'];
             $nombre = $parametros['nombre'];
             $apellidos = $parametros['apellidos'];
