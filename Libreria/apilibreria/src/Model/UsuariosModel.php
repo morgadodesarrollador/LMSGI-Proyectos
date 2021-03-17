@@ -15,11 +15,11 @@ class UsuariosModel {
     public static function new($param){
        // print_r(array_keys($param));
        try{
-            $values = array_values($param);
+         //   $values = array_values($param);
             UsuariosModel::conexionDB();
             $sql = "insert into usuarios (usuarioid, nombre, apellidos, direccion, ciudad, anioNac) 
                     values (?, ?, ?, ?, ?, ?)";
-            $data = UsuariosModel::$DB->run($sql, $values);
+            $data = UsuariosModel::$DB->run($sql, $param);
             return "Usuario ". $param['nombre'] . " insertado correctamente ";
        } catch(Exception $e){
           return $e->getMessage();
