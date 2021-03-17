@@ -7,6 +7,7 @@
     
         public function new(Request  $request, Response $response, $args){
             $parametros = $request->getParsedBody();
+            var_dump($parametros);
             $result = UsuariosModel::new($parametros);
             $response->getBody()->write($result);
             return $response
