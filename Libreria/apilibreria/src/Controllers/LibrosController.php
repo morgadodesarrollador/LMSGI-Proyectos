@@ -8,6 +8,8 @@
     class LibrosController {
         
         public function new(Request $request, Response $response, $args){
+            $parametros = $request->getParsedBody();
+            var_dump($parametros);
             $response->getBody()->write("Insertar un nuevo Libro");
             return $response
                 ->withHeader('Content-Type', 'application/json')
