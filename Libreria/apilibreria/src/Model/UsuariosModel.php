@@ -16,11 +16,12 @@ class UsuariosModel {
        // print_r(array_keys($param));
        try{
          //   $values = array_values($param);
+            var_dump($param);
             UsuariosModel::conexionDB();
             $sql = "insert into usuarios (usuarioid, nombre, apellidos, direccion, ciudad, anioNac) 
                     values (?, ?, ?, ?, ?, ?)";
             $data = UsuariosModel::$DB->run($sql, $param);
-            return "Usuario ". $param['nombre'] . " insertado correctamente ";
+         //   return "Usuario ". $param['nombre'] . " insertado correctamente ";
        } catch(Exception $e){
           return $e->getMessage();
        }
