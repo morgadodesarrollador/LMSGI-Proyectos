@@ -4,16 +4,18 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderModule } from './header/header.module';
+import { MainModule } from './main/main.module';
+import { FooterModule } from './footer/footer.module';
 
 
 
 @NgModule({
-  declarations: [ HeaderComponent, MainComponent, FooterComponent ],
+  declarations: [  ],
   imports: [
-    CommonModule, HeaderModule
+    CommonModule, HeaderModule, MainModule, FooterModule
   ],
   exports: [
-    CommonModule, HeaderComponent, MainComponent, FooterComponent
+    CommonModule, HeaderModule, MainModule, FooterModule
   ]
 })
 export class EstructuraModule { }
