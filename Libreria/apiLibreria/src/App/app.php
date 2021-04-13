@@ -1,14 +1,16 @@
 <?php
 
+echo "app";
 use Slim\Factory\AppFactory;
 use Slim\Exception\NotFoundException;
 // cargamos el autoload para que pueda detectar el resto de las clases
 require __DIR__ . '/../../vendor/autoload.php';
+echo "app";
 
 
 // creamos la aplicación php
 $app = AppFactory::create();
-$app->setBasePath("/libreria/apilibreria/public/index.php");
+$app->setBasePath("/Libreria/apiLibreria/public/index.php");
 
 //Cargamos en memoria los archivos de rutas que contendrán los entrypoints a cada una de las tablas.
 //los entrypoints harán referencia a las acciones CRUD de una tabla de nuestra BD
