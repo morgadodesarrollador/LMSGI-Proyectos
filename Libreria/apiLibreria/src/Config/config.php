@@ -6,6 +6,6 @@ interface config {
     CONST DB_USER    = 
     CONST DB_PORT    = 
     CONST DB_PASS    = 
-    CONST DB_CHARSET = 
-    CONST DB_HOST    = 'utf8';
+    CONST DB_CHARSET = 'utf8';
+    CONST DB_HOST    = 
 }
