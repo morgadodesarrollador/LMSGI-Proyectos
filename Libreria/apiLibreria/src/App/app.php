@@ -5,7 +5,7 @@ use Slim\Factory\AppFactory;
 use Slim\Exception\NotFoundException;
 // cargamos el autoload para que pueda detectar el resto de las clases
 require __DIR__ . '/../../vendor/autoload.php';
-echo "app";
+echo "app1";
 
 
 // creamos la aplicación php
