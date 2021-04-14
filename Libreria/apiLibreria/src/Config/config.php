@@ -7,5 +7,5 @@ interface config {
     CONST DB_PORT    = 
     CONST DB_PASS    = 
     CONST DB_CHARSET = 
-    CONST DB_HOST    = 
+    CONST DB_HOST    = 'utf8';
 }
