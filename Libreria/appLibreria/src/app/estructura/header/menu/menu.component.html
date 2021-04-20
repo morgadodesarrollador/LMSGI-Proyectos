@@ -1,3 +1,9 @@
-<nav>
-  menu
+<nav class="nav">
+  <a class="nav-link active"
+     [routerLink]="['/libros',{ outlets: {  primary:['menu'], secondary:['home']} }]">Libros</a>
+  <a class="nav-link active"
+     [routerLink]="['/categorias',{ outlets: {  primary:['menu'], secondary:['home']} }]">Categorias</a>
+
+  <a class="nav-link active" routerLink="/categorias">Categorias</a>
+  <a class="nav-link active" routerLink="/usuarios">Usuarios</a>
 </nav>
