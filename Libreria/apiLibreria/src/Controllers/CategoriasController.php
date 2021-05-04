@@ -9,6 +9,7 @@
         
        
         public function getAll($request, $response, $args){
+            echo "getAll";
             $categorias = CategoriasModel::getAll();
             $categoriasjson = json_encode($categorias);
             $response->getBody()->write($categoriasjson);
