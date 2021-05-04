@@ -16,9 +16,9 @@ class DB {
         ";dbname=".config::DB_NAME.
         ";port=".config::DB_PORT.
         ";charset=".config::DB_CHARSET;
-        echo $dsn;
+       
         $this->pdo = new PDO($dsn, config::DB_USER, config::DB_PASS, $opciones);
-        
+        var_dump($this->pdo);
     }
 
     public function run($sql, $args = []){
