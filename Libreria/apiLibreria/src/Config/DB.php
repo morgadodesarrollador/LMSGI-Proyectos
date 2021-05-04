@@ -10,7 +10,7 @@ class DB {
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, //que PDO lance las excepciones si hay errores
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ //los resultados los regrese en un objeto
         ];
-        echo "hola";
+        echo "hola". config::DB_HOST;
         $dsn = 
         "mysql:host=".config::DB_HOST.
         ";dbname=".config::DB_NAME.
