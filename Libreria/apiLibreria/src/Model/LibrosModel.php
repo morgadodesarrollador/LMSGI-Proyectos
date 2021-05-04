@@ -13,7 +13,8 @@ class LibrosModel {
     }
     public static function getFilter($categoria){
         $sql = "select * from libros where categoriaid = ?";
-        $data = LibrosModel::$DB->run($sql, $categoria);
+        echo $sql;
+        $data = LibrosModel::$DB->run($sql, [$categoria]);
         return $data->fetchAll();
     }
 
