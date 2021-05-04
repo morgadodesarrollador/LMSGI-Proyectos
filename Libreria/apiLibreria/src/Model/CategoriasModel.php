@@ -12,7 +12,6 @@ class CategoriasModel {
         CategoriasModel::$DB = new DB();
     }
     public static function getFilter($sql, $param){
-        echo $sql;
         $data = CategoriasModel::$DB->run($sql, $param);
         return $data->fetchAll();
     }

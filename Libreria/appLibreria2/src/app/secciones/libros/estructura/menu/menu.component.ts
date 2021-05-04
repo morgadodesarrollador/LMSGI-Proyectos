@@ -37,7 +37,7 @@ export class MenuComponent implements OnInit {
       this.items.splice(i, 1)
     }
     console.log(this.items);
-    this.librosService.getLibrosCat(valor);
+    this.librosService.getFilter(valor);
    // this.router.navigate(['libros', 'categoria', valor]);
 
   }

@@ -13,9 +13,10 @@ export class LibrosService {
 
   constructor(private http: HttpClient) { }
 
-  async getLibrosCat(idCat) {
-    console.log(idCat);
-
+  getFilter(idCat) {
+    let ruta = URL + 'libros/filter';
+    let data = JSON.stringify({idCat});
+    console.log (data);
   }
   async filtrar(filtros: number[]): Promise<MsnApiLibros[]>{
     let ruta = URL + 'filter/libros';
