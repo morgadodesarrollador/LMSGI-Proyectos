@@ -8,6 +8,7 @@
     
               
         public function getAll($request, $response, $args){
+            echo "ediores";
             $editores = EditoresModel::getAll();
             $editoresjson = json_encode($editores);
             $response->getBody()->write($editoresjson);
