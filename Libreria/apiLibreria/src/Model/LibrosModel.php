@@ -17,6 +17,7 @@ class LibrosModel {
     }
 
     public static function getAll(){
+        echo "conexion";
         LibrosModel::conexionDB();
         $sql = "Select * from libros";
         $data = LibrosModel::$DB->run($sql, []);
