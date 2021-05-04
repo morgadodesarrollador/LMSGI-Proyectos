@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LibrosService } from '../../services/libros.service';
-import { MsnApiLibros } from '../../interfaces/LibrosInterface';
+import { CategoriasService } from '../../services/categorias.service';
+import { MsnApiCategorias } from '../../interfaces/CategoriasInterface';
 
 @Component({
   selector: 'app-libros',
@@ -8,14 +9,14 @@ import { MsnApiLibros } from '../../interfaces/LibrosInterface';
   styleUrls: ['./libros.component.scss']
 })
 export class LibrosComponent implements OnInit {
-  respuesta: MsnApiLibros;
+  respuesta: MsnApiCategorias[];
 
-  constructor(private librosService: LibrosService) {
+  constructor(private catService: CategoriasService) {
 
   }
-
-   ngOnInit() {
-
+  async ngOnInit() {
+    this.respuesta = await this.catService.getCategorias();
+    console.log (this.respuesta);
   }
 
 }
