@@ -14,9 +14,7 @@
                 ->withStatus(200);
         }
         public function getAll($request, $response, $args){
-            echo "get ALL LIBROS";
             $libros = LibrosModel::getAll();
-            echo "libros";
             $librosJson = json_encode($libros);
             $response->getBody()->write($librosJson);
             return $response
