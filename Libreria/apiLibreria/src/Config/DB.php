@@ -19,7 +19,7 @@ class DB {
 }
 
     public function run($sql, $args = []){
-        echo $sql;
+      
         // Ejecutará las consulta $sql con parámetros que le pasemos
         //sql --> select * from articulos where id = ? and precio > ?
         //En args meteremos variables del where de una consulta --> $args = [10, 56.7]
