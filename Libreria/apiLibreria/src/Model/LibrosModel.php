@@ -14,7 +14,7 @@ class LibrosModel {
     public static function getFilter($parametros){
         $sql = "select * from libros where categoriaid = ?";
         echo $sql;
-        var_dump($parametros);
+       
         $data = LibrosModel::$DB->run($sql, $parametros);
         return $data->fetchAll();
     }
