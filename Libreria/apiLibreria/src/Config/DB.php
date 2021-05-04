@@ -19,6 +19,7 @@ class DB {
 }
 
     public function run($sql, $args = []){
+        echo "sdjñsk";
         // Ejecutará las consulta $sql con parámetros que le pasemos
         //sql --> select * from articulos where id = ? and precio > ?
         //En args meteremos variables del where de una consulta --> $args = [10, 56.7]
@@ -26,7 +27,7 @@ class DB {
             $data = $this->pdo->query($sql);
             return $data;
         }
-        echo "sdjñsk";
+       
         //manda argumentos --> preparamos la sentencia
         //hace una sustitución de variables
         $sentencia = $this->pdo->prepare($sql);
