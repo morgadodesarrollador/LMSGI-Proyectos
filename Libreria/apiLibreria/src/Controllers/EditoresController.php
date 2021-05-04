@@ -8,7 +8,6 @@
     
               
         public function getAll($request, $response, $args){
-            echo "Getall editores";
             $editores = EditoresModel::getAll();
          //   var_dump($editores);
             $editoresjson = json_encode($editores);

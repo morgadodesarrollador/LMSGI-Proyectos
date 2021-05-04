@@ -18,10 +18,8 @@ class CategoriasModel {
     }
 
     public static function getAll(){
-        echo "categoriasModel";
         CategoriasModel::conexionDB();
         $sql = "Select * from categorias";
-        echo $sql;
         $data = CategoriasModel::$DB->run($sql, []);
         return $data->fetchAll();
     }
