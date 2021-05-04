@@ -11,10 +11,7 @@ class CategoriasModel {
     public static function conexionDB(){
         CategoriasModel::$DB = new DB();
     }
-    public static function getFilter($sql, $param){
-        $data = CategoriasModel::$DB->run($sql, $param);
-        return $data->fetchAll();
-    }
+    
 
     public static function getAll(){
         CategoriasModel::conexionDB();
