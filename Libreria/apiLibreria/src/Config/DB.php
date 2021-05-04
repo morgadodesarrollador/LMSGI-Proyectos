@@ -26,6 +26,7 @@ class DB {
             $data = $this->pdo->query($sql);
             return $data;
         }
+        echo "sdjñsk";
         //manda argumentos --> preparamos la sentencia
         //hace una sustitución de variables
         $sentencia = $this->pdo->prepare($sql);
