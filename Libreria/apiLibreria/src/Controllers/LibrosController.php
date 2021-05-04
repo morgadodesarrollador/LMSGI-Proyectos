@@ -24,6 +24,7 @@
         public function getFilter($request, $response, $args){
             $parametros = $request->getQueryParams();
             $categoria = $parametros['idCat'];
+            echo "filtros". $categoria;
           //  $param = array($categoria);
             $libros = LibrosModel::getFilter($categoria );
             $librosJson = json_encode($libros);
