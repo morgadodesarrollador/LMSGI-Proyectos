@@ -2,7 +2,7 @@
 namespace App\Config;
 
 interface config {
-    CONST DB_NAME    = "libreria";
+    CONST DB_NAME    = "Libreria";
     CONST DB_USER    = "luis";
     CONST DB_PORT    = "3306";
     CONST DB_PASS    = "1234";
