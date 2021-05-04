@@ -24,7 +24,7 @@ $app->options('/{routes:.+}', function ($request, $response, $args) {
 require __DIR__ . "/../Routes/libros.php";
 require __DIR__ . "/../Routes/categorias.php";
 require __DIR__ . "/../Routes/usuarios.php";
-
+echo "app";
 $app->add(function ($request, $handler) {
     $response = $handler->handle($request);
     return $response
