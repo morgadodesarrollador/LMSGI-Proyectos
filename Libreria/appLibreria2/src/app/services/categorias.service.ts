@@ -24,7 +24,6 @@ export class CategoriasService {
     return new Promise ( resolve => {
       this.http.get<MsnApiCategorias[]>(ruta)
       .subscribe (data => {
-          console.log(data);
           resolve(data);
       });
     });

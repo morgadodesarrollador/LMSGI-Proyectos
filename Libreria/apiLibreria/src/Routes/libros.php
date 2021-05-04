@@ -6,5 +6,7 @@ use Slim\Routing\RouteCollectorProxy;
 $app->group('/api', function(RouteCollectorProxy $group){
     $group->get('/libros', 'App\Controllers\LibrosController:getAll');
     $group->post('/libros/new', 'App\Controllers\LibrosController:new');   
+    $group->get('/libros/filter', 'App\Controllers\LibrosController:getfilter');   
+    
     #  $group->get('/libros/{id}', 'App\Controllers\LibrosController:show');
 });

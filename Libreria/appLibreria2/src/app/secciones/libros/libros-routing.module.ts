@@ -6,7 +6,8 @@ import { LibrosComponent } from './libros.component';
 const routes: Routes = [
   { path: '', component: LibrosComponent , outlet: 'primary',
     children: [
-      { path: 'listar', component: ListarComponent, outlet: 'cuerpo' }
+      { path: 'listar', component: ListarComponent, outlet: 'cuerpo' },
+      { path: 'categoria/:CatId', component: ListarComponent }
     ]
   },
 

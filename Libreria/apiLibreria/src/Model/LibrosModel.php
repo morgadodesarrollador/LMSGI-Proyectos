@@ -11,8 +11,9 @@ class LibrosModel {
     public static function conexionDB(){
         LibrosModel::$DB = new DB();
     }
-    public static function getFilter($sql, $param){
-        $data = LibrosModel::$DB->run($sql, $param);
+    public static function getFilter($categoria){
+        $sql = "select * from libros where categoriaid = ?";
+        $data = LibrosModel::$DB->run($sql, $categoria);
         return $data->fetchAll();
     }
 

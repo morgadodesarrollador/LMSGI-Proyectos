@@ -8,6 +8,7 @@ import { CuerpoComponent } from './estructura/cuerpo/cuerpo.component';
 import { AsideComponent } from './estructura/aside/aside.component';
 import { ListarComponent } from './acciones/listar/listar.component';
 import { ComunesModule } from '../../comunes/comunes.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { ComunesModule } from '../../comunes/comunes.module';
     LibrosComponent, CuerpoComponent, AsideComponent, MenuComponent, ListarComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule,FormsModule,
     LibrosRoutingModule,
     ComunesModule
   ]

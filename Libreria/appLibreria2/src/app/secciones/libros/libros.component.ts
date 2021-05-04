@@ -16,7 +16,6 @@ export class LibrosComponent implements OnInit {
   }
   async ngOnInit() {
     this.respuesta = await this.catService.getCategorias();
-    console.log (this.respuesta);
   }
 
 }

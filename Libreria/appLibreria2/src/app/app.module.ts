@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 import { EstructuraModule } from './estructura/estructura.module';
 import { SeccionesModule } from './secciones/secciones.module';
 import { ComunesModule } from './comunes/comunes.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,FormsModule,
     AppRoutingModule, EstructuraModule, SeccionesModule, ComunesModule,
     HttpClientModule
   ],

@@ -21,4 +21,15 @@
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
         }
+        public function getFilter($request, $response, $args){
+            $parametros = $request->getQueryParams();
+            $categoria = $parametros['idCat'];
+          //  $param = array($categoria);
+            $libros = LibrosModel::getFilter($categoria );
+            $librosJson = json_encode($libros);
+            $response->getBody()->write($librosJson);
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(200);
+        }
     }

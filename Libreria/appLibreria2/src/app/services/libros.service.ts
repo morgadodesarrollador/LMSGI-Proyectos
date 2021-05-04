@@ -13,7 +13,22 @@ export class LibrosService {
 
   constructor(private http: HttpClient) { }
 
- async getLibros(): Promise<MsnApiLibros[]> {
+  async getLibrosCat(idCat) {
+    console.log(idCat);
+
+  }
+  async filtrar(filtros: number[]): Promise<MsnApiLibros[]>{
+    let ruta = URL + 'filter/libros';
+    let data = JSON.stringify(filtros);
+    console.log (data);
+    return new Promise (resolve => {
+      this.http.get<MsnApiLibros[]>(ruta)
+        .subscribe (data => {
+        })
+    })
+  }
+
+  async getLibros(): Promise<MsnApiLibros[]> {
     let ruta = URL + 'libros';
     console.log(ruta);
     const httpOptions = {
@@ -25,10 +40,9 @@ export class LibrosService {
     return new Promise ( resolve => {
       this.http.get<MsnApiLibros[]>(ruta)
       .subscribe (data => {
-          console.log(data);
           resolve(data);
       })
     })
-
   }
+
 }
