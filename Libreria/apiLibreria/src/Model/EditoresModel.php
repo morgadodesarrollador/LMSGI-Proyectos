@@ -13,7 +13,7 @@ class EditoresModel {
     }
  
     public static function getAll(){
-        CategoriasModel::conexionDB();
+        EditoresModel::conexionDB();
         $sql = "Select * from editores";
         $data = EditoresModel::$DB->run($sql, []);
         return $data->fetchAll();
