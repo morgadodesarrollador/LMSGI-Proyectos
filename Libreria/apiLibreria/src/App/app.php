@@ -19,11 +19,11 @@ $app->options('/{routes:.+}', function ($request, $response, $args) {
     return $response;
 });
 
-
-
 require __DIR__ . "/../Routes/libros.php";
 require __DIR__ . "/../Routes/categorias.php";
 require __DIR__ . "/../Routes/usuarios.php";
+require __DIR__ . "/../Routes/editores.php";
+
 $app->add(function ($request, $handler) {
     $response = $handler->handle($request);
     return $response
