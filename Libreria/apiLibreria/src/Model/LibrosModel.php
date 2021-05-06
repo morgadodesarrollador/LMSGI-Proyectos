@@ -24,7 +24,9 @@ class LibrosModel {
 
     public static function getAll(){
         LibrosModel::conexionDB();
-        $sql = "Select * from libros";
+        $sql = "select *, categorias.nombre_categoria from libros 
+        inner join categorias 
+        on libros.categoriaid = categorias.categoriaid ";
         $data = LibrosModel::$DB->run($sql, []);
         return $data->fetchAll();
     }
