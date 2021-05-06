@@ -12,7 +12,11 @@ class LibrosModel {
         LibrosModel::$DB = new DB();
     }
     public static function getFilter($parametros){
-        $sql = "select * from libros where categoriaid = ?";
+        $sql = 
+        "select *, categorias.nombre_categoria from libros 
+        inner join categorias 
+        on libros.categoriaid = categorias.categoriaid 
+        where categoriaid = ?";
         LibrosModel::conexionDB();
         $data = LibrosModel::$DB->run($sql, $parametros);
         return $data->fetchAll();
