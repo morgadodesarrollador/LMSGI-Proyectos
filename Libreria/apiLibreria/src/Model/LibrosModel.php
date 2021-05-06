@@ -19,7 +19,7 @@ class LibrosModel {
         on libros.categoriaid = Cat.categoriaid 
         inner join editores Ed
         on libros.editorid = Ed.editorid
-        where categoriaid = ?";
+        where libros.categoriaid = ?";
         LibrosModel::conexionDB();
         $data = LibrosModel::$DB->run($sql, $parametros);
         return $data->fetchAll();
