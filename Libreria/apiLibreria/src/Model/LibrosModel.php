@@ -26,8 +26,8 @@ class LibrosModel {
         LibrosModel::conexionDB();
         $sql = "select *, Cat.nombre_categoria, Ed.nombre_editorial from libros 
         inner join categorias Cat
-        inner join editores Ed
         on libros.categoriaid = Cat.categoriaid 
+        inner join editores Ed
         on libros.editorid = Ed.editorid";
         $data = LibrosModel::$DB->run($sql, []);
         return $data->fetchAll();
