@@ -13,9 +13,12 @@ class LibrosModel {
     }
     public static function getFilter($parametros){
         $sql = 
-        "select *, categorias.nombre_categoria from libros 
-        inner join categorias 
-        on libros.categoriaid = categorias.categoriaid 
+        "select *, Cat.nombre_categoria, Ed.nombre_editorial 
+        from libros 
+        inner join categorias Cat
+        on libros.categoriaid = Cat.categoriaid 
+        inner join editores Ed
+        on libros.editorid = Ed.editorid
         where categoriaid = ?";
         LibrosModel::conexionDB();
         $data = LibrosModel::$DB->run($sql, $parametros);
@@ -24,7 +27,8 @@ class LibrosModel {
 
     public static function getAll(){
         LibrosModel::conexionDB();
-        $sql = "select *, Cat.nombre_categoria, Ed.nombre_editorial from libros 
+        $sql = "select *, Cat.nombre_categoria, Ed.nombre_editorial 
+        from libros 
         inner join categorias Cat
         on libros.categoriaid = Cat.categoriaid 
         inner join editores Ed
