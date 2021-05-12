@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,FormsModule,
     LibrosRoutingModule,
     ComunesModule
-  ]
+  ],
+  exports: [ ListarComponent ]
 })
 export class LibrosModule { }

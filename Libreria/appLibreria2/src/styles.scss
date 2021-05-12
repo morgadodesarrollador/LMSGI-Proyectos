@@ -36,10 +36,13 @@ html, body { height: 100%; }
 .section-cuerpo {
   grid-area: cuerpo;
   min-height: 500px;
-  background-color: red;
 }
 
 .section-aside {
   grid-area: aside;
   background-color: orange;
+}
+
+.tarjeta {
+
 }

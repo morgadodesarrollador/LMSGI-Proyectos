@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  url: 'http://libreria.jamorgado.es/api/'
+  url: 'http://libreria.jamorgado.es/api/',
+  urlImg: 'http://libreria.jamorgado.es/imagenes'
 
 };
 

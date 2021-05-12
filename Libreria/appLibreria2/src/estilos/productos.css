@@ -1,0 +1,53 @@
+
+article {
+  display: grid;
+  grid-template-rows: auto 50px 50px;
+  grid-template-columns: 50% 50%;
+  grid-gap: 5px;
+  padding: 5px;
+  grid-template-areas:
+      "foto foto"
+      "titulo  titulo"
+      "datos  datos"
+      "desc   desc"
+
+}
+article figure {
+  grid-area: foto;
+  width: 70%;
+  text-align: center;
+}
+article figure img{
+  width:100%;
+}
+article h3 {
+  grid-area: titulo;
+  font-size: 18px;
+  color:blue;
+}
+article .datos{
+  width: 80%;
+  margin: 0 auto;
+  grid-area: datos;
+  padding: 10px;
+  border-top: grey dashed 1px;
+}
+
+article .datos span {
+  color: red;
+
+}
+article .precio {
+  grid-area: precio;
+  color:green;
+}
+article .descripcion {
+  grid-area: desc;
+  font-size:14px;
+  font-style: italic;
+}
+
+article:hover {
+  border: 2px solid rgba(0,0,0,.2);
+  border-radius: 10px;
+}

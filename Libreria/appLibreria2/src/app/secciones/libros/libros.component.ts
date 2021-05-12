@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LibrosService } from '../../services/libros.service';
+import { LibrosService } from '../../services/libros/libros.service';
 import { CategoriasService } from '../../services/categorias.service';
 import { MsnApiCategorias } from '../../interfaces/CategoriasInterface';
 

@@ -4,13 +4,17 @@ import { CategoriasRoutingModule } from './categorias-routing.module';
 import { CategoriasComponent } from './categorias.component';
 import { MenuComponent } from './estructura/menu/menu.component';
 import { CuerpoComponent } from './estructura/cuerpo/cuerpo.component';
+import { ListarComponent } from './acciones/listar/listar.component';
+import { LibrosModule } from '../libros/libros.module';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 
 @NgModule({
-  declarations: [ MenuComponent, CuerpoComponent, CategoriasComponent ],
+  declarations: [ MenuComponent, CuerpoComponent, CategoriasComponent, ListarComponent ],
   imports: [
     CommonModule,
-    CategoriasRoutingModule
+    CategoriasRoutingModule,LibrosModule,
+    PipesModule
   ]
 })
 export class CategoriasModule { }

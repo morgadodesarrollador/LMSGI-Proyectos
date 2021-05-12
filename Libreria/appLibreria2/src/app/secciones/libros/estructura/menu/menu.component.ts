@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MsnApiCategorias } from 'src/app/interfaces/CategoriasInterface';
 import { IEditor } from 'src/app/interfaces/EditoresInterface';
 import { CategoriasService } from 'src/app/services/categorias.service';
-import { LibrosService } from 'src/app/services/libros.service';
+import { LibrosService } from 'src/app/services/libros/libros.service';
 import { EditoresService } from '../../../../services/editores.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { FiltrosService } from 'src/app/services/libros/filtros.service';
 
 @Component({
   selector: 'app-menu',
@@ -19,6 +20,7 @@ export class MenuComponent implements OnInit {
   items: number[] = [];
   constructor(private catService: CategoriasService,
               private librosService: LibrosService,
+              private filtros: FiltrosService,
               private router: Router,
               private edService: EditoresService) { }
 
@@ -28,7 +30,7 @@ export class MenuComponent implements OnInit {
     this.respEditores = await this.edService.getAll();
   }
 
-  selectCat (valor) {
+  async selectCat (valor) {
     console.log(valor);
     let i = this.items.indexOf(valor);
     if (i == -1){
@@ -37,7 +39,8 @@ export class MenuComponent implements OnInit {
       this.items.splice(i, 1)
     }
     console.log(this.items);
-    this.librosService.getFilter(valor);
+    let r = await this.filtros.getFilter(valor);
+    console.log(r);
    // this.router.navigate(['libros', 'categoria', valor]);
 
   }

@@ -7,6 +7,8 @@ export interface MsnApiLibros {
   precio: number;
   entrega: number;
   imagen: number;
+  nombre_categoria: string;
+  nombre_editorial: string;
 }
 
 export interface MsnApiLibros1{
