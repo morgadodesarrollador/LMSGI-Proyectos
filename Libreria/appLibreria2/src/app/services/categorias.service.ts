@@ -15,6 +15,15 @@ export class CategoriasService {
 
   constructor(private http: HttpClient) { }
 
+  new(categoria) {
+
+    let ruta = URL + 'categorias/new';
+    console.log(categoria, ruta);
+    this.http.post(ruta, categoria)
+      .subscribe(respuesta => {
+        console.log(respuesta);
+      });
+  }
   async getLibros(idCat): Promise<MsnApiLibros[]> {
     let ruta = URL + 'libros/filter?idCat='+idCat;
     return new Promise (resolve => {

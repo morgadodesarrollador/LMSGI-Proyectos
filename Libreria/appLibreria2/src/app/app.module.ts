@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent
   ],
   imports: [
-    BrowserModule,FormsModule,
+    BrowserModule, FormsModule,
     AppRoutingModule, EstructuraModule, SeccionesModule, ComunesModule,
     HttpClientModule
   ],

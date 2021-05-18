@@ -1,3 +1,7 @@
+export interface ICategoria {
+  categoria_id: number;
+  nombre_categoria: string;
+}
 export interface MsnApiCategorias {
   categoria_id: number;
   nombre_categoria: string;
