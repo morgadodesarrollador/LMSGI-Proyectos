@@ -9,7 +9,7 @@
             $parametros = $request->getParseBody();
            // $result = UsuariosModel::new($parametros); 
             $categoriaid = $parametros['categoriaid'];
-            $nombbre =$parametros['nombre_categoria'];
+            $nombre =$parametros['nombre_categoria'];
             echo $nombre;
             $valores = array($categoriaid, $nombbre);
             $resultado = CategoriasModel::new($parametros);
