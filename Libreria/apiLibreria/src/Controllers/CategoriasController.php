@@ -6,12 +6,10 @@
 
     class CategoriasController {
         public function new(Request $request, response $response, $args){
-            echo "nueva categoria";
             $parametros = $request->getParsedBody();
            // $result = UsuariosModel::new($parametros); 
             $categoriaid = $parametros['categoriaid'];
             $nombre =$parametros['nombre_categoria'];
-            echo $nombre;
             $valores = array($categoriaid, $nombbre);
             $resultado = CategoriasModel::new($parametros);
             $response->getBody()->write($resultado);

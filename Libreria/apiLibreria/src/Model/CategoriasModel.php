@@ -13,7 +13,7 @@ class CategoriasModel {
         CategoriasModel::$DB = new DB();
     }
     
-    public static function new($paramentros){
+    public static function new($parametros){
         try{
             $valores = array_values($parametros);
             CategoriasModel::conexionDB();
