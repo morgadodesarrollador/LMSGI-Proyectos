@@ -10,6 +10,7 @@
            // $result = UsuariosModel::new($parametros); 
             $categoriaid = $parametros['categoriaid'];
             $nombbre =$parametros['nombre_categoria'];
+            echo $nombre;
             $valores = array($categoriaid, $nombbre);
             $resultado = CategoriasModel::new($parametros);
             $response->getBody()->write($resultado);
