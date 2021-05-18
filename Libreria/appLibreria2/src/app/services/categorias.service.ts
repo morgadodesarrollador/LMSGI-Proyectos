@@ -19,13 +19,16 @@ export class CategoriasService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Accept' : 'application/json',
-        'Access-Control-Allow-Origin': '*',
+     //   'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/x-www-form-urlencoded'
       })
     };
+    let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
+
     let data = JSON.stringify(categoria);
     let ruta = URL + 'categorias/new';
     console.log(categoria, ruta);
-    this.http.post(ruta, data)
+    this.http.post(ruta, data, httpOptions)
       .subscribe(respuesta => {
         console.log(respuesta);
       });
