@@ -10,7 +10,7 @@ import { ICategoria } from '../../../../interfaces/CategoriasInterface';
 export class NewComponent implements OnInit {
   a: number = 3;
   categoria: ICategoria = {
-    categoria_id: 10,
+    categoriaid: 10,
     nombre_categoria: 'Bases de Datos'
   }
   constructor( private catService: CategoriasService) { }

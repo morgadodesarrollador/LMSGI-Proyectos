@@ -11,8 +11,9 @@
             $categoriaid = $parametros['categoriaid'];
             $nombre =$parametros['nombre_categoria'];
             $valores = array($categoriaid, $nombre);
-            $resultado = CategoriasModel::new($parametros);
-            $response->getBody()->write($resultado);
+         //   $resultado = CategoriasModel::new($parametros);
+            $categoriasjson = json_encode($parametros);
+            $response->getBody()->write($categoriasjson);
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
