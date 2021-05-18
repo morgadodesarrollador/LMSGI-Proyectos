@@ -5,9 +5,9 @@
     use App\Model\CategoriasModel;    
 
     class CategoriasController {
-        public function new($request, $response, $args){
+        public function new(Request $request, response $response, $args){
             echo "nueva categoria";
-            $parametros = $request->getParseBody();
+            $parametros = $request->getParsedBody();
            // $result = UsuariosModel::new($parametros); 
             $categoriaid = $parametros['categoriaid'];
             $nombre =$parametros['nombre_categoria'];
