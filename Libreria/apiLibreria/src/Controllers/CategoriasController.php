@@ -5,6 +5,19 @@
     use App\Model\CategoriasModel;    
 
     class CategoriasController {
+        public function new($request, $response, $args){
+            $parametros = $request->getParseBody();
+           // $result = UsuariosModel::new($parametros); 
+            $categoriaid = $parametros['categoriaid'];
+            $nombbre =$parametros['nombre_categoria'];
+            $valores = array($categoriaid, $nombbre);
+            $resultado = CategoriasModel::new($parametros);
+            $response->getBody()->write($resultado);
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(200);
+
+        }
         public function getAll($request, $response, $args){
             $categorias = CategoriasModel::getAll();
             $categoriasjson = json_encode($categorias);

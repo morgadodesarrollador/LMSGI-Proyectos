@@ -1,6 +1,7 @@
 <?php
 namespace App\Model;
 use App\Config\DB;
+use Exception;
 
 //definimos LibrosModel como una clase estática:
 //no se puede hacer un new, no hay $this, no hay método __contruct()
@@ -12,7 +13,18 @@ class CategoriasModel {
         CategoriasModel::$DB = new DB();
     }
     
-
+    public static function new($paramentros){
+        try{
+            $valores = array_values($parametros);
+            CategoriasModel::conexionDB();
+            $sql = "insert into categorias (categoriaid, nombre_categoria) 
+                    values (?, ?)";
+            $data = CategoriasModel::$DB->run($sql, $valores);
+            return "Categoria ". $parametros['nombre_categoria'] . " insertado correctamente ";
+        }catch(Exception $e){
+            return $e->getMessage();
+         }
+    }
     public static function getAll(){
         CategoriasModel::conexionDB();
         $sql = "Select * from categorias";
