@@ -25,10 +25,10 @@ export class CategoriasService {
     };
     let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
 
-    let data = JSON.stringify(categoria);
+   // let data = JSON.stringify(categoria);
     let ruta = URL + 'categorias/new';
     console.log(categoria, ruta);
-    this.http.post(ruta, data, httpOptions)
+    this.http.post(ruta, categoria, httpOptions)
       .subscribe(respuesta => {
         console.log(respuesta);
       });
