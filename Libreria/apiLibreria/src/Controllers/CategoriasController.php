@@ -7,6 +7,7 @@
     class CategoriasController {
         public function new(Request $request, response $response, $args){
             $parametros = $request->getParsedBody();
+            $parametros = json_decode($parametros);
            // $result = UsuariosModel::new($parametros); 
             $categoriaid = $parametros['categoriaid'];
             $nombre =$parametros['nombre_categoria'];
