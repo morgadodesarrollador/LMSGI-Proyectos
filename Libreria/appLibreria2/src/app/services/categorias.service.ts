@@ -17,8 +17,9 @@ export class CategoriasService {
 
   new(data: ICategoria){
     const ruta = `${ URL }categorias/new`;
-    console.log(ruta, {data});
-    this.http.post<MsnApiCategorias>(ruta, {data})
+    let datos = JSON.stringify(data);
+    console.log(ruta, datos);
+    this.http.post<MsnApiCategorias>(ruta, datos)
       .subscribe(datos => {
         console.log(datos);
       })
