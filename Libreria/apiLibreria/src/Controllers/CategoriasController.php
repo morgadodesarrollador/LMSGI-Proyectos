@@ -8,13 +8,13 @@
         public function new(Request $request, response $response, $args){
             $parametros = $request->getParsedBody();
         //    $parametros = $request->getBody()->getContents();
-            $parametros = json_decode($parametros[0]);
+            $parametros = (array)json_decode($request->getBody()->getContents());
            // $result = UsuariosModel::new($parametros); 
             $categoriaid = $parametros['categoriaid'];
             $nombre = $parametros['nombre_categoria'];
             $valores = array($categoriaid, $nombre);
             $resultado = CategoriasModel::new($valores);
-            $dataJson = json_encode(array('status'=> 'success', 'data' => $parametros[1]));
+            $dataJson = json_encode(array('status'=> 'success', 'data' => $parametros));
             $response->getBody()->write($dataJson);
             return $response
                 ->withHeader('Content-Type', 'application/json')
