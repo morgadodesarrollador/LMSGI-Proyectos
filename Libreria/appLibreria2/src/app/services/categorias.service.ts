@@ -16,10 +16,18 @@ export class CategoriasService {
   constructor(private http: HttpClient) { }
 
   new(data: ICategoria){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Accept' : 'application/json',
+     //   'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      })
+    };
     const ruta = `${ URL }categorias/new`;
-    let datos = JSON.stringify(data);
-    console.log(ruta, datos);
-    this.http.post<MsnApiCategorias>(ruta, datos)
+    //let datos = JSON.stringify(data);
+
+    console.log(ruta, data);
+    this.http.post<MsnApiCategorias>(ruta, data, httpOptions)
       .subscribe(datos => {
         console.log(datos);
       })

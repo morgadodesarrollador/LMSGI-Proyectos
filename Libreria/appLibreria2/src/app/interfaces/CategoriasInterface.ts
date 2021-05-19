@@ -1,3 +1,5 @@
+
+
 export interface ICategoria {
   categoriaid: string;
   nombre_categoria: string;

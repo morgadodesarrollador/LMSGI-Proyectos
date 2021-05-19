@@ -13,7 +13,7 @@
             $nombre = $parametros['nombre_categoria'];
             $valores = array($categoriaid, $nombre);
             $resultado = CategoriasModel::new($valores);
-            $dataJson = json_encode(array('status'=> 'success', 'data' => $parametros));
+            $dataJson = json_encode(array('status'=> 'success', 'data' => $valores));
             $response->getBody()->write($dataJson);
             return $response
                 ->withHeader('Content-Type', 'application/json')
