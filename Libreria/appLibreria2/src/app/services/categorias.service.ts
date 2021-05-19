@@ -17,8 +17,12 @@ export class CategoriasService {
 
   new(data: ICategoria){
     const ruta = `${ URL }categorias/new`;
-    console.log(ruta, data);
-    this.http.post
+    console.log(ruta, {data});
+    this.http.post<MsnApiCategorias>(ruta, {data})
+      .subscribe(datos => {
+        console.log(datos);
+      })
+
   }
 
   new1(categoria: ICategoria) {
