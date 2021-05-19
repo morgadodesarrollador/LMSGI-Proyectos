@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment.prod';
 import { Subject } from 'rxjs';
-import { MsnApiCategorias } from '../interfaces/CategoriasInterface';
+import { ICategoria, MsnApiCategorias } from '../interfaces/CategoriasInterface';
 import { MsnApiLibros } from '../interfaces/LibrosInterface';
 
 const URL = environment.url;
@@ -15,7 +15,7 @@ export class CategoriasService {
 
   constructor(private http: HttpClient) { }
 
-  new(categoria) {
+  new(categoria: ICategoria) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Accept' : 'application/json',
@@ -25,10 +25,10 @@ export class CategoriasService {
     };
     let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
 
-   // let data = JSON.stringify(categoria);
-    let ruta = URL + 'categorias/new';
-    console.log(categoria, ruta);
-    this.http.post(ruta, categoria, httpOptions)
+    const data = categoria;
+    const ruta = `${ URL }categorias/new`;
+    console.log("-->>", data, ruta, httpOptions);
+    this.http.post(ruta, data)
       .subscribe(respuesta => {
         console.log(respuesta);
       });
