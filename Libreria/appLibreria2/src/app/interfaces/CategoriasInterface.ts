@@ -2,13 +2,10 @@ export interface ICategoria {
   categoriaid: string;
   nombre_categoria: string;
 }
-export interface MsnApiCategorias {
-  categoria_id: number;
-  nombre_categoria: string;
-}
 
-export interface MsnApiCategorias1{
+
+export interface MsnApiCategorias{
   status?: string;
   errors?: string;
-  //data?: ICategoria[];
+  data?: ICategoria;
 }

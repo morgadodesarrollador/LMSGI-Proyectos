@@ -8,14 +8,17 @@ import { ICategoria } from '../../../../interfaces/CategoriasInterface';
   styleUrls: ['./new.component.scss']
 })
 export class NewComponent implements OnInit {
-  a: number = 3;
   categoria: ICategoria = {
-    categoriaid: '10',
-    nombre_categoria: 'Bases de Datos'
+    categoriaid: '1031111111111111143',
+    nombre_categoria: 'Bas1212es dedfgasdfasdf Datos'
   }
-  constructor( private catService: CategoriasService) { }
+  constructor( private catService: CategoriasService) {
+    console.log(this.categoria);
+
+  }
   guardar(){
     console.log('Guardando datos ...');
+    console.log(this.categoria);
     this.catService.new(this.categoria);
 
   }

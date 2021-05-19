@@ -15,7 +15,14 @@ export class CategoriasService {
 
   constructor(private http: HttpClient) { }
 
-  new(categoria: ICategoria) {
+  new(data: ICategoria){
+    const ruta = `${ URL }categorias/new`;
+    console.log(ruta, data);
+    this.http.post
+  }
+
+  new1(categoria: ICategoria) {
+
     const httpOptions = {
       headers: new HttpHeaders({
         'Accept' : 'application/json',

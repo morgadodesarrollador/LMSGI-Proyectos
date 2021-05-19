@@ -28,6 +28,7 @@ export class ListarComponent implements OnInit {
       console.log(data);
       this.respuesta = data;
     });
+
    // this.respuesta = await this.librosService.getLibros();
   //  this.idCat = Number(this.route.snapshot.paramMap.get('CatId'));
   //  this.route.paramMap.subscribe((params: ParamMap) => {

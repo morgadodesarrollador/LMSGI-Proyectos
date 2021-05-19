@@ -2,11 +2,13 @@
 <form>
   <div class="mb-3">
     <label class="form-label">Id</label>
-    <input [(ngModel)]="categoria.categoriaid" name="id" type="number" class="form-control" placeholder="inrtoduce id ...">
+    <input [(ngModel)]="categoria.categoriaid"
+            name="id" type="number" class="form-control" placeholder="inrtoduce id ...">
   </div>
   <div class="mb-3">
     <label class="form-label">Nombre Categoria</label>
-    <input [(ngModel)]="categoria.nombre_categoria" name="nombre" type="text" class="form-control" placeholder="inrtoduce el nombre ...">
+    <input [(ngModel)]="categoria.nombre_categoria"
+            name="nombre" type="text" class="form-control" placeholder="inrtoduce el nombre ...">
   </div>
   <button (click)="guardar()" type="button" class="btn btn-primary">Guardar</button>
 
