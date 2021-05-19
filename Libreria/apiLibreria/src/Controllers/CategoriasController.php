@@ -6,6 +6,7 @@
 
     class CategoriasController {
         public function new(Request $request, response $response, $args){
+            echo "lk<jdflñsdf";
             $parametros = $request->getParsedBody();
            // $result = UsuariosModel::new($parametros); 
             $categoriaid = $parametros['categoriaid'];
