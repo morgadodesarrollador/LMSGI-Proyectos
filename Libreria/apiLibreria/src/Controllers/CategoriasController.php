@@ -7,14 +7,13 @@
     class CategoriasController {
         public function new(Request $request, response $response, $args){
             $parametros = $request->getParsedBody();
-            var_dump($parametros);
            // $result = UsuariosModel::new($parametros); 
             $categoriaid = $parametros['categoriaid'];
             $nombre =$parametros['nombre_categoria'];
             $valores = array($categoriaid, $nombre);
-           // $resultado = CategoriasModel::new($parametros);
-           // $categoriasjson = json_encode($resultado);
-            $response->getBody()->write($valores);
+            $resultado = CategoriasModel::new($parametros);
+            $dataJson = json_encode(array('status'=> 'success'));
+            $response->getBody()->write($dataJson);
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
