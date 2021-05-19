@@ -25,7 +25,8 @@ export class CategoriasService {
     };
     let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
 
-    const data = JSON.stringify(categoria);
+   // const data = JSON.stringify(categoria);
+    const data = categoria;
     const ruta = `${ URL }categorias/new`;
     console.log(data, ruta);
     this.http.post<any>(ruta, data, httpOptions)
