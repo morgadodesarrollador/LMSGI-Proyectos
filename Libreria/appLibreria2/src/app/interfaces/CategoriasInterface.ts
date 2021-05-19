@@ -1,5 +1,5 @@
 export interface ICategoria {
-  categoriaid: number;
+  categoriaid: string;
   nombre_categoria: string;
 }
 export interface MsnApiCategorias {
