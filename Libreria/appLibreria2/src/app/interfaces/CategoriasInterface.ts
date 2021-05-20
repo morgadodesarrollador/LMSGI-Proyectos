@@ -8,6 +8,7 @@ export interface ICategoria {
 
 export interface MsnApiCategorias{
   status?: string;
+  mensaje?: string;
   errors?: string;
   data?: ICategoria;
 }

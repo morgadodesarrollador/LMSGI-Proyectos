@@ -14,7 +14,10 @@
             $nombre = $parametros['nombre_categoria'];
             $valores = array($categoriaid, $nombre);
             $resultado = CategoriasModel::new($parametros);
-            $dataJson = json_encode(array('status'=> 'success', 'data' => $parametros));
+            $dataJson = json_encode(array(
+                'status'=> 'exit', 
+                '' => 'Registro insertado con éxito',
+                'data' => $parametros));
             $response->getBody()->write($dataJson);
             return $response
                 ->withHeader('Content-Type', 'application/json')

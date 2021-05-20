@@ -9,8 +9,8 @@ import { ICategoria } from '../../../../interfaces/CategoriasInterface';
 })
 export class NewComponent implements OnInit {
   categoria: ICategoria = {
-    categoriaid: '1031111111111111143',
-    nombre_categoria: 'Bas1212es dedfgasdfasdf Datos'
+    categoriaid: '30',
+    nombre_categoria: 'Datos'
   }
   constructor( private catService: CategoriasService) {
     console.log(this.categoria);

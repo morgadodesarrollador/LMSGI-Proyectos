@@ -21,7 +21,6 @@ export class CategoriasService {
         'Accept' : 'application/json',
      //   'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/x-www-form-urlencoded'
-
       })
     };
     const ruta = `${ URL }categorias/new`;
@@ -30,6 +29,9 @@ export class CategoriasService {
     console.log(ruta, data);
     this.http.post<MsnApiCategorias>(ruta, data, httpOptions)
       .subscribe(datos => {
+        if (datos.status == 'success'){
+
+        }
         console.log(datos);
       })
 
